@@ -170,16 +170,13 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(array, rNum) {
-    let theReturnArray = [];
-    for(let i = 0; i < array.length; i++){
-      array[i].reviews.includes(rNum) ? theReturnArray.push(array[i]) : null; 
-    }
-    console.log(theReturnArray);
-    return theReturnArray;
+function getReviewByRating(array, rNum) {
+  let theReturnArray = [];
+  for(let i = 0; i < array.length; i++){
+    Math.floor(array[i].rating) === rNum ? theReturnArray.push(array[i]) : null; 
   }
-
-  getReviewByRating(reviews, 4);
+  return theReturnArray;
+}
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
